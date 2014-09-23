@@ -23,9 +23,11 @@ $job = Add-ScFileWatcher -Path $bennyConfig.WebsitePath -Action {
     $relativePath = $Event.SourceEventArgs.FullPath.Replace($bennyConfig.WebsitePath.Trim("\") + "\", "")
     foreach($filter in $filters) {
       if($relativePath -like $filter) {
-        write-host $Event.SourceEventArgs.FullPath
-        $webPath = Join-Path (Join-Path  $bennyConfig.GlobalWebPath ($bennyConfig.WebsiteCodeName)) $bennyConfig.WebFolderName
-        cp  $Event.SourceEventArgs.FullPath "$webPath$relativePath"
+        $item = Get-ScProjectItem -Path ($Event.SourceEventArgs.FullPath)
+        if($item.Properties.Item("ItemType").Value -eq "Content") {
+          $webPath = Join-Path (Join-Path  $bennyConfig.GlobalWebPath ($bennyConfig.WebsiteCodeName)) $bennyConfig.WebFolderName
+          cp  $Event.SourceEventArgs.FullPath "$webPath\$relativePath"
+        }
       }
     }
   }
