@@ -12,6 +12,7 @@ Describe "Add-ScFileWatcher" {
       $global:scFileWatcherPath = $Event.SourceEventArgs.FullPath
     }
     Set-Content  -Value "changed" -Path "TestDrive:\test.txt"
+    Sleep -m 10
     It "Should have invoked action" {
       $global:invokedScFileWatcher | Should Be $true
     }
