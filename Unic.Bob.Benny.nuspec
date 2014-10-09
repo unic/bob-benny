@@ -7,8 +7,11 @@
     <owners>Unic AG</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Benny deploys a file inside Visual Studio as soon as it is saved.</description>
+    <dependencies>
+      <dependency id="Unic.Bob.Config" />
+    </dependencies>
   </metadata>
   <files>
-    <file src="src\**" target="tools\" />
+    <file src="src\**"  />
   </files>
 </package>
