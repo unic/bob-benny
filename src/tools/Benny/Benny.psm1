@@ -18,7 +18,7 @@ $job = Add-ScFileWatcher -Path $bennyConfig.WebsitePath -Action {
   # Visual Studio is producing lot of temp file, so put the further function at the end of the stack
   sleep -m 1
   if((Test-Path $path) -and (Get-Item $path) -isnot [System.IO.DirectoryInfo]) {
-    $filters = $bennyConfig.BennyFilter.Split(";") | % {$_.Trim()}
+    $filters = $bennyConfig.BennyFileWatcher.Split(";") | % {$_.Trim()}
 
     $relativePath = $Event.SourceEventArgs.FullPath.Replace($bennyConfig.WebsitePath.Trim("\") + "\", "")
     foreach($filter in $filters) {

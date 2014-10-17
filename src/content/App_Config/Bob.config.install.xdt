@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Configuration xmlns="http://www.unic.com/Bob" xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-  <BennyFilter xdt:Transform="InsertIfMissing">
+  <BennyFileWatcher xdt:Transform="InsertIfMissing">
     *.cshtml;
     App_Config\*.config
-  </BennyFilter>
+  </BennyFileWatcher>
 </Configuration>
