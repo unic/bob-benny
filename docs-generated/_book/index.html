@@ -5,23 +5,21 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Get-ScProjectItem | Benny</title>
+        <title>Introduction | Benny</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="">
+        <meta name="description" content="Benny provides functionallity to perform deployments of single files without a whole deployment. When Benny is installed to a Solution, as soon as Visual Studio will be started, Benny watches for changes on the file system and deploys them to the coresponding web root.">
         <meta name="generator" content="GitBook 1.3.4">
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
         
     
     
-    <link rel="next" href="../api/Init-Benny.html" />
+    <link rel="next" href="./api/README.html" />
     
-    
-    <link rel="prev" href="../api/Add-ScFileWatcher.html" />
     
 
         
@@ -29,11 +27,11 @@
     <body>
         
         
-<link rel="stylesheet" href="../gitbook/style.css">
+<link rel="stylesheet" href="gitbook/style.css">
 
 
         
-    <div class="book" data-level="2" data-basepath=".." data-revision="1417439364673">
+    <div class="book" data-level="0" data-basepath="." data-revision="1418914774844">
     
 
 <div class="book-summary">
@@ -51,10 +49,10 @@
         
     
         
-        <li class="chapter " data-level="0" data-path="index.html">
+        <li class="chapter active" data-level="0" data-path="index.html">
             
                 
-                    <a href="../index.html">
+                    <a href="./index.html">
                         <i class="fa fa-check"></i>
                         
                          Introduction
@@ -65,13 +63,30 @@
         </li>
     
         
-        <li class="chapter " data-level="1" data-path="api/Add-ScFileWatcher.html">
+        <li class="chapter " data-level="1" data-path="api/README.html">
             
                 
-                    <a href="../api/Add-ScFileWatcher.html">
+                    <a href="./api/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.</b>
+                        
+                         benny - API
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="api/Add-ScFileWatcher.html">
+            
+                
+                    <a href="./api/Add-ScFileWatcher.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
                         
                          Add-ScFileWatcher
                     </a>
@@ -81,13 +96,13 @@
         </li>
     
         
-        <li class="chapter active" data-level="2" data-path="api/Get-ScProjectItem.html">
+        <li class="chapter " data-level="1.2" data-path="api/Get-ScProjectItem.html">
             
                 
-                    <a href="../api/Get-ScProjectItem.html">
+                    <a href="./api/Get-ScProjectItem.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>2.</b>
+                            <b>1.2.</b>
                         
                          Get-ScProjectItem
                     </a>
@@ -97,18 +112,23 @@
         </li>
     
         
-        <li class="chapter " data-level="3" data-path="api/Init-Benny.html">
+        <li class="chapter " data-level="1.3" data-path="api/Init-Benny.html">
             
                 
-                    <a href="../api/Init-Benny.html">
+                    <a href="./api/Init-Benny.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>3.</b>
+                            <b>1.3.</b>
                         
                          Init-Benny
                     </a>
                 
             
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -193,7 +213,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Benny</a>
+        <a href="./" >Benny</a>
     </h1>
 </div>
 
@@ -201,24 +221,33 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_2">
+                    <section class="normal" id="section-gitbook_5">
                     
-                        <h1 id="get-scprojectitem">Get-ScProjectItem</h1>
-<p>Get-ScProjectItem [-Path] <string> [<CommonParameters>]</p>
-<h2 id="syntax">Syntax</h2>
-<pre><code>syntaxItem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-
-----------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-
-{@{name=Get-ScProjectItem; CommonParameters=True; WorkflowCommonParameters=False; parameter=System.Object[]}}
-</code></pre><h2 id="parameters">Parameters</h2>
-<pre><code>-Path &lt;string&gt;
-</code></pre><p>Required?  true</p>
-<p>Position? 0</p>
-<p>Default value? </p>
-<p>Accept pipeline input? false</p>
-<p>Accept wildchard characters? </p>
-<h2 id="examples">Examples</h2>
+                        <h1 id="benny">Benny</h1>
+<p>Benny provides functionallity to perform deployments of single files without a whole deployment. When Benny is installed to a Solution, as soon as Visual Studio will be started, Benny watches for changes on the file system and deploys them to the coresponding web root.</p>
+<h2 id="how-to-use-benny-in-my-project">How to use Benny in my Project?</h2>
+<p>To install Benny into your solution simply install the NuGet package &quot;Unic.Bob.Benny&quot;</p>
+<pre><code>PM&gt; Install-Package Unic.Bob.Benny
+</code></pre><p>After the package is installed a file-system-watcher is initilized. This watcher watch for chagnes to files in the Website-project, which matches &quot;BennyFilter&quot; and have set their build action to &quot;Content&quot;. Following keys of Bob.config are important for Benny:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BennyFilter</td>
+<td>A list of file-matches which Benny looks for changes. The matches must be separated by semicolons. The matches are relative to the project-root folder. This means &quot;App_Config\*.config&quot; will match &quot;App_Config\Unic.config&quot; but not &quot;Dummy\App_Config\Unic.config&quot;.</td>
+<td><em>.cshtml; App_Config\\</em>.config</td>
+</tr>
+</tbody>
+</table>
+<h2 id="technical-documentation">Technical Documentation</h2>
+<p>Benny is basically a NuGet package with a PowerShell module loaded in the init.ps1.</p>
+<p>The file-watcher will be started as soon as the PowerShell module is loaded. </p>
 
                     
                     </section>
@@ -229,23 +258,21 @@
         </div>
 
         
-        <a href="../api/Add-ScFileWatcher.html" class="navigation navigation-prev " aria-label="Previous page: Add-ScFileWatcher"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../api/Init-Benny.html" class="navigation navigation-next " aria-label="Next page: Init-Benny"><i class="fa fa-angle-right"></i></a>
+        <a href="./api/README.html" class="navigation navigation-next navigation-unique" aria-label="Next page: benny - API"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
-<script src="../gitbook/app.js"></script>
+<script src="gitbook/app.js"></script>
 
     
     <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
     
-    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
     
 
 <script>
