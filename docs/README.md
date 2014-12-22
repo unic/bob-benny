@@ -1,6 +1,7 @@
+<div class="chapterlogo">![Benny](Benny.jpg)</div>
 # Benny
 
-Benny provides functionallity to perform deployments of single files without a whole deployment. When Benny is installed to a Solution, as soon as Visual Studio will be started, Benny watches for changes on the file system and deploys them to the coresponding web root.
+Benny provides functionality to perform deployments of single files without a whole deployment. When Benny is installed to a Solution, as soon as Visual Studio will be started, Benny watches for changes on the file system and deploys them to the coresponding web root.
 
 ## How to use Benny in my Project?
 
@@ -12,9 +13,11 @@ After the package is installed a file-system-watcher is initilized. This watcher
 
 | Key | Description | Example |
 | --- | ----------- | ------- |
-| BennyFilter | A list of file-matches which Benny looks for changes. The matches must be separated by semicolons. The matches are relative to the project-root folder. This means "App\_Config\\\*.config" will match "App\_Config\Unic.config" but not "Dummy\App\_Config\Unic.config". | *.cshtml; App_Config\\\*.config |
+| BennyFilter | A list of file-matches which Benny looks for changes. The matches must be separated by semicolons. The matches are relative to the project-root folder. This means `App_Config\*.config` will match `App_Config\Unic.config` but not `Dummy\App_Config\Unic.config`. | `*.cshtml; App_Config\*.config` |
+
 
 ## Technical Documentation
+
 Benny is basically a NuGet package with a PowerShell module loaded in the init.ps1.
 
-The file-watcher will be started as soon as the PowerShell module is loaded. 
+The file-watcher will be started as soon as the PowerShell module is loaded.
