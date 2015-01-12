@@ -28,5 +28,3 @@ function Initialize-Benny {
         }
     }
 }
-
-Set-Alias -Name Init-Benny -Value Initialize-Benny
