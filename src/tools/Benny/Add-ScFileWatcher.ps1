@@ -1,8 +1,8 @@
 <#
 .SYNOPSIS
-Adds a file Watch to a specific path.
+Adds a file watcher to a specific path.
 .DESCRIPTION
-`Add-ScFileWatcher` adds a file watcher to a specifc path.
+`Add-ScFileWatcher` adds a file watcher to a specific path.
 Every time a file in this path is changed, created or renamed `$Action` will be called.
 
 .PARAMETER Path

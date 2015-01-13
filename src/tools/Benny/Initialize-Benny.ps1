@@ -1,9 +1,9 @@
 <#
 .SYNOPSIS
-Starts benny and registers the file watcher for the current project.
+Starts Benny and registers the file watcher for the current project.
 .DESCRIPTION
-`Initialize-Benny` starts benny by adding a file watcher to the Website directory.
-When a file changes, which mactches the `BennyFileWatcher`, it will be copied to the WebRoot.
+`Initialize-Benny` starts Benny by adding a file watcher to the website directory.
+When a file changes, which matches the `BennyFileWatcher`, it will be copied to the WebRoot.
 
 .EXAMPLE
 Initialize-Benny
