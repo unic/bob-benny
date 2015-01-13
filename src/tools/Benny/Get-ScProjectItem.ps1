@@ -1,3 +1,17 @@
+<#
+.SYNOPSIS
+Gets a Visual Studio project item object from a specific path.
+.DESCRIPTION
+Gets a Visual Studio project item object from a specific path.
+This object contains all informations stored in the csproj about this file.
+
+.PARAMETER Path
+The path to thee file.
+
+.EXAMPLE
+Get-ScProjectItem .\MyClass.cs
+
+#>
 function Get-ScProjectItem
 {
   [CmdletBinding()]
