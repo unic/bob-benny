@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-  <BennyFileWatcher xdt:Transform="InsertIfMissing">
-    *.cshtml;
-    App_Config\*.config
-  </BennyFileWatcher>
+    <BennyFileWatcher xdt:Transform="InsertIfMissing">
+        *.cshtml;
+    </BennyFileWatcher>
 </Configuration>
