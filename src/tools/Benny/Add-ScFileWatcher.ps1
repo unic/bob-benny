@@ -32,10 +32,10 @@ function Add-ScFileWatcher
      NotifyFilter = [IO.NotifyFilters]'FileName, LastWrite'
     }
 
-    Register-ObjectEvent $fsw Changed -Action $Action
-    Register-ObjectEvent $fsw Created -Action $Action
-    Register-ObjectEvent $fsw Renamed -Action $Action
-
+    Register-ObjectEvent $fsw Changed -Action $Action | Out-Null
+    Register-ObjectEvent $fsw Created -Action $Action | Out-Null
+    Register-ObjectEvent $fsw Renamed -Action $Action | Out-Null
+    $fsw
 
   }
 }

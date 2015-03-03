@@ -17,9 +17,13 @@ function Initialize-Benny {
         exit
     }
 
+    if($global:bennyFileWatcher) {
+        $global:bennyFileWatcher.Dispose()
+    }
+
     Write-Verbose "Register Benny at $($bennyConfig.WebsitePath)"
 
-    $job = Add-ScFileWatcher -Path $bennyConfig.WebsitePath -Action {
+    $global:bennyFileWatcher = Add-ScFileWatcher -Path $bennyConfig.WebsitePath -Action {
         $path = $Event.SourceEventArgs.FullPath
         # Visual Studio is producing lot of temp file, so put the further function at the end of the stack
         sleep -m 1
