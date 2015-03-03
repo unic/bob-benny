@@ -66,3 +66,13 @@ function Set-PackageToBeDevelopmentDependency($PackageId, $ProjectDirectoryPath)
 
 # Set this NuGet Package to be installed as a Development Dependency.
 Set-PackageToBeDevelopmentDependency -PackageId $package.Id -ProjectDirectoryPath ([System.IO.Directory]::GetParent($project.FullName))
+
+Import-Module (Join-Path $toolsPath "Benny") -Force
+try
+{
+    Initialize-Benny -Verbose
+}
+catch
+{
+    Write-Warning $error[0]
+}
