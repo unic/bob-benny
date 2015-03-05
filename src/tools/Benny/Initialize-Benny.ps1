@@ -35,7 +35,8 @@ function Initialize-Benny {
                 if($relativePath -like $filter) {
                     $item = Get-ScProjectItem -Path ($Event.SourceEventArgs.FullPath)
                     if($item.Properties.Item("ItemType").Value -eq "Content") {
-                        $webPath = Join-Path (Join-Path  $bennyConfig.GlobalWebPath ($bennyConfig.WebsiteCodeName)) $bennyConfig.WebFolderName
+
+                        $webPath = $bennyConfig.WebRoot
                         cp  $Event.SourceEventArgs.FullPath "$webPath\$relativePath"
                     }
                 }
