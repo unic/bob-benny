@@ -1,0 +1,15 @@
+source https://chocolatey.org/api/v2
+
+nuget curl
+
+
+source https://nuget.org/api/v2
+nuget pester
+
+
+
+
+source https://teamcity.unic.com/httpAuth/app/nuget/v1/FeedService.svc/ username: "%PAKET_USER%" password: "%PAKET_PASSWORD%"
+nuget Unic.Bob.Config
+nuget Unic.Bob.Rubble
+nuget Unic.Bob.Keith 
