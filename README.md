@@ -8,4 +8,4 @@ When a file changes which do not require a compilation, it is copied automatical
 
 ## Documentation
 
-<https://me.unic.com/display/BULLWCMS/Benny>
+<https://teamcity.unic.com/repository/download/Sitecore_Frameworks_Bob_TheBook_BuildTheBook/.lastSuccessful/Benny/README.html>
