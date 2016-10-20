@@ -1,7 +1,8 @@
 # Changelog
 
-## 1.2
-* Updated the theme
+## 2.0
+* Removed dependency to Unic.Bob.Config
+* Fix docs
 
 ## 1.1
 * update Bob.config and Pester
