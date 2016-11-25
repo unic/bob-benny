@@ -12,6 +12,6 @@
   </metadata>
   <files>
     <file src="src\**"  />
-    <file src="packages\Unic.Bob.Config\**" target="tools\packages" exclude="**\package\services\metadata\core-properties\**" />
+    <file src="packages\Unic.Bob.Config\**" target="tools\packages\Unic.Bob.Config" exclude="**\package\services\metadata\core-properties\**" />
   </files>
 </package>
