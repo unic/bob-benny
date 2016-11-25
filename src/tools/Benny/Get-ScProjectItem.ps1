@@ -25,7 +25,7 @@ function Get-ScProjectItem
   )
   Process
   {
-    foreach($project in $dte.Solution.Projects) {
+    foreach($project in (Get-Project -All)) {
       $projectFolder = $project.FullName.Substring(0, $project.FullName.LastIndexOf("\") + 1)
       if($Path.StartsWith($projectFolder)) {
         $relativePath = $Path.Replace($projectFolder, "")

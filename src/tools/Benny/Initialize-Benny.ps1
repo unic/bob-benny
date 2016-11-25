@@ -30,12 +30,12 @@ function Initialize-Benny {
         if((Test-Path $path) -and (Get-Item $path) -isnot [System.IO.DirectoryInfo]) {
             $filters = $bennyConfig.BennyFileWatcher.Split(";") | % {$_.Trim()}
 
-            $relativePath = $Event.SourceEventArgs.FullPath.Replace($bennyConfig.WebsitePath.Trim("\") + "\", "")
+            $item = Get-ScProjectItem -Path ($Event.SourceEventArgs.FullPath)
+            $projectPath = $item.ContainingProject.FullName.Substring(0, $item.ContainingProject.FullName.LastIndexOf("\") + 1)
+            $relativePath = $Event.SourceEventArgs.FullPath.Replace($projectPath, "")
             foreach($filter in $filters) {
                 if($relativePath -like $filter) {
-                    $item = Get-ScProjectItem -Path ($Event.SourceEventArgs.FullPath)
                     if($item.Properties.Item("ItemType").Value -eq "Content") {
-
                         $webPath = $bennyConfig.WebRoot
                         cp  $Event.SourceEventArgs.FullPath "$webPath\$relativePath"
                     }
