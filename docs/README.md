@@ -1,4 +1,4 @@
-<div class="chapterlogo">![Benny](Benny.jpg)</div>
+<div class="chapterlogo"><img src="./Benny.jpg"></div>
 
 # Benny
 
